@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6">
+  <header class="sticky top-0 z-30 flex h-16 items-center justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6">
     <div class="flex items-center space-x-4">
       <h1 class="text-lg font-semibold">{{ pageTitle }}</h1>
     </div>
@@ -40,8 +40,8 @@
 import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { Search, Bell, Sun, Moon, User } from 'lucide-vue-next'
-import Button from './ui/Button.vue'
-import Input from './ui/Input.vue'
+import {Button} from '@/components/ui/button'
+import {Input} from '@/components/ui/input'
 
 const route = useRoute()
 const isDark = ref(false)

@@ -6,9 +6,9 @@
         <h2 class="text-2xl font-bold">Orders</h2>
         <p class="text-muted-foreground">Manage customer orders</p>
       </div>
-      <Button>
+      <Button variant="default">
         <Plus class="h-4 w-4 mr-2" />
-        New Order
+        New Order1
       </Button>
     </div>
 
@@ -111,18 +111,18 @@
 
 <script setup lang="ts">
 import { Plus, ShoppingCart, Clock, CheckCircle, XCircle, Eye, Edit } from 'lucide-vue-next'
-import Button from '@/components/ui/Button.vue'
-import Card from '@/components/ui/Card.vue'
-import CardHeader from '@/components/ui/CardHeader.vue'
-import CardTitle from '@/components/ui/CardTitle.vue'
-import CardContent from '@/components/ui/CardContent.vue'
-import Badge from '@/components/ui/Badge.vue'
-import Table from '@/components/ui/Table.vue'
-import TableHeader from '@/components/ui/TableHeader.vue'
-import TableBody from '@/components/ui/TableBody.vue'
-import TableRow from '@/components/ui/TableRow.vue'
-import TableHead from '@/components/ui/TableHead.vue'
-import TableCell from '@/components/ui/TableCell.vue'
+import {Button} from '@/components/ui/button'
+import {Card} from '@/components/ui/card'
+import {CardHeader} from '@/components/ui/card'
+import {CardTitle} from '@/components/ui/card'
+import {CardContent} from '@/components/ui/card'
+import {Badge} from '@/components/ui/badge'
+import {Table} from '@/components/ui/table'
+import {TableHeader} from '@/components/ui/table'
+import {TableBody} from '@/components/ui/table'
+import {TableRow} from '@/components/ui/table'
+import {TableHead} from '@/components/ui/table'
+import {TableCell} from '@/components/ui/table'
 
 const orders = [
   {

@@ -81,16 +81,16 @@
 <script setup lang="ts">
 import { Plus, Filter, User, Edit, Trash2 } from 'lucide-vue-next'
 import {Button} from '@/components/ui/button'
-import Input from '@/components/ui/Input.vue'
-import Card from '@/components/ui/Card.vue'
-import CardContent from '@/components/ui/CardContent.vue'
-import Badge from '@/components/ui/Badge.vue'
-import Table from '@/components/ui/Table.vue'
-import TableHeader from '@/components/ui/TableHeader.vue'
-import TableBody from '@/components/ui/TableBody.vue'
-import TableRow from '@/components/ui/TableRow.vue'
-import TableHead from '@/components/ui/TableHead.vue'
-import TableCell from '@/components/ui/TableCell.vue'
+import {Input} from '@/components/ui/input'
+import {Card} from '@/components/ui/card'
+import {CardContent} from '@/components/ui/card'
+import {Badge} from '@/components/ui/badge'
+import {Table} from '@/components/ui/table'
+import {TableHeader} from '@/components/ui/table'
+import {TableBody} from '@/components/ui/table'
+import {TableRow} from '@/components/ui/table'
+import {TableHead} from '@/components/ui/table'
+import {TableCell} from '@/components/ui/table'
 
 const users = [
   {

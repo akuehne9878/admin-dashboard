@@ -92,7 +92,7 @@
           <CardTitle>Report Generation Frequency</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-64 w-full bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950 dark:to-orange-900 rounded-lg flex items-center justify-center">
+          <div class="h-64 w-full bg-linear-to-br from-orange-50 to-orange-100 dark:from-orange-950 dark:to-orange-900 rounded-lg flex items-center justify-center">
             <div class="text-center">
               <PieChart class="h-16 w-16 text-orange-600 mx-auto mb-4" />
               <p class="text-muted-foreground">Report frequency chart</p>
@@ -106,7 +106,7 @@
           <CardTitle>Download Statistics</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-64 w-full bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-950 dark:to-teal-900 rounded-lg flex items-center justify-center">
+          <div class="h-64 w-full bg-linear-to-br from-teal-50 to-teal-100 dark:from-teal-950 dark:to-teal-900 rounded-lg flex items-center justify-center">
             <div class="text-center">
               <Activity class="h-16 w-16 text-teal-600 mx-auto mb-4" />
               <p class="text-muted-foreground">Download activity chart</p>
@@ -120,12 +120,12 @@
 
 <script setup lang="ts">
 import { Download, BarChart3, TrendingUp, Users, FileText, PieChart, Activity } from 'lucide-vue-next'
-import Button from '@/components/ui/Button.vue'
-import Card from '@/components/ui/Card.vue'
-import CardHeader from '@/components/ui/CardHeader.vue'
-import CardTitle from '@/components/ui/CardTitle.vue'
-import CardContent from '@/components/ui/CardContent.vue'
-import Badge from '@/components/ui/Badge.vue'
+import {Button} from '@/components/ui/button'
+import {Card} from '@/components/ui/card'
+import {CardHeader} from '@/components/ui/card'
+import {CardTitle} from '@/components/ui/card'
+import {CardContent} from '@/components/ui/card'
+import {Badge} from '@/components/ui/badge'
 
 const recentReports = [
   {

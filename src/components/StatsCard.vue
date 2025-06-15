@@ -21,8 +21,8 @@
 </template>
 
 <script setup lang="ts">
-import Card from './ui/Card.vue'
-import CardContent from './ui/CardContent.vue'
+import {Card} from '@/components/ui/card'
+import {CardContent} from '@/components/ui/card'
 
 interface Props {
   title: string

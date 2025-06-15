@@ -87,10 +87,10 @@
 <script setup lang="ts">
 import { Users, DollarSign, ShoppingCart, TrendingUp, UserPlus, Package, CreditCard } from 'lucide-vue-next'
 import StatsCard from '@/components/StatsCard.vue'
-import Card from '@/components/ui/Card.vue'
-import CardHeader from '@/components/ui/CardHeader.vue'
-import CardTitle from '@/components/ui/CardTitle.vue'
-import CardContent from '@/components/ui/CardContent.vue'
+import {Card} from '@/components/ui/card'
+import {CardHeader} from '@/components/ui/card'
+import {CardTitle} from '@/components/ui/card'
+import {CardContent} from '@/components/ui/card'
 
 const recentActivities = [
   {

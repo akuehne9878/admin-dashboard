@@ -64,7 +64,7 @@
           <CardTitle>Traffic Overview</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-80 w-full bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900 rounded-lg flex items-center justify-center">
+          <div class="h-80 w-full bg-linear-to-br from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900 rounded-lg flex items-center justify-center">
             <div class="text-center">
               <BarChart3 class="h-16 w-16 text-blue-600 mx-auto mb-4" />
               <p class="text-muted-foreground">Interactive traffic chart would go here</p>
@@ -78,7 +78,7 @@
           <CardTitle>User Engagement</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-80 w-full bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900 rounded-lg flex items-center justify-center">
+          <div class="h-80 w-full bg-linear-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900 rounded-lg flex items-center justify-center">
             <div class="text-center">
               <PieChart class="h-16 w-16 text-green-600 mx-auto mb-4" />
               <p class="text-muted-foreground">Engagement metrics chart would go here</p>
@@ -113,10 +113,10 @@
 
 <script setup lang="ts">
 import { TrendingUp, Users, Activity, Target, BarChart3, PieChart } from 'lucide-vue-next'
-import Card from '@/components/ui/Card.vue'
-import CardHeader from '@/components/ui/CardHeader.vue'
-import CardTitle from '@/components/ui/CardTitle.vue'
-import CardContent from '@/components/ui/CardContent.vue'
+import {Card} from '@/components/ui/card'
+import {CardHeader} from '@/components/ui/card'
+import {CardTitle} from '@/components/ui/card'
+import {CardContent} from '@/components/ui/card'
 
 const topPages = [
   { title: 'Homepage', path: '/', views: '45,231', percentage: '35.6' },

@@ -120,10 +120,10 @@
 </template>
 
 <script setup lang="ts">
-import Card from '@/components/ui/Card.vue'
-import CardHeader from '@/components/ui/CardHeader.vue'
-import CardTitle from '@/components/ui/CardTitle.vue'
-import CardContent from '@/components/ui/CardContent.vue'
-import Input from '@/components/ui/Input.vue'
-import Button from '@/components/ui/Button.vue'
+import {Card} from '@/components/ui/card'
+import {CardHeader} from '@/components/ui/card'
+import {CardTitle} from '@/components/ui/card'
+import {CardContent} from '@/components/ui/card'
+import {Input} from '@/components/ui/input'
+import {Button} from '@/components/ui/button'
 </script>

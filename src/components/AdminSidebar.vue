@@ -1,8 +1,8 @@
 <template>
-  <aside class="fixed left-0 top-0 z-40 h-screen w-64 bg-card border-r border-border transition-transform duration-300 ease-in-out">
+  <aside class="fixed left-0 top-0 z-40 h-screen w-64 bg-card border-r transition-transform duration-300 ease-in-out">
     <div class="flex h-full flex-col">
       <!-- Logo -->
-      <div class="flex h-16 items-center justify-center border-b border-border px-6">
+      <div class="flex h-16 items-center justify-center border-b px-6">
         <div class="flex items-center space-x-2">
           <Settings class="h-8 w-8 text-primary" />
           <span class="text-xl font-bold">AdminHub</span>
@@ -24,7 +24,7 @@
       </nav>
 
       <!-- User Profile -->
-      <div class="border-t border-border p-4">
+      <div class="border-t p-4">
         <div class="flex items-center space-x-3">
           <div class="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
             <User class="h-4 w-4 text-primary" />
