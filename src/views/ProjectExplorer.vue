@@ -236,4 +236,3 @@ function createProject() {
   showAddProjectDialog.value = false
 }
 </script>
-</script>
