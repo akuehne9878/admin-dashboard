@@ -7,6 +7,7 @@ import Settings from '@/views/Settings.vue'
 import Profiles from '@/views/Profiles.vue'
 import ProfileDetail from '@/views/ProfileDetail.vue'
 import Parameters from '@/views/Parameters.vue'
+import ProjectExplorer from '@/views/ProjectExplorer.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,9 +39,8 @@ const router = createRouter({
     },
     { path: '/profiles', name: 'Profiles', component: Profiles },
     { path: '/profiles/:id', name: 'ProfileDetail', component: ProfileDetail },
-    { path: '/parameters', name: 'Parameters', component: Parameters }
-
-
+    { path: '/parameters', name: 'Parameters', component: Parameters },
+    { path: '/projects', name: 'ProjectExplorer', component: ProjectExplorer }
   ],
 })
 

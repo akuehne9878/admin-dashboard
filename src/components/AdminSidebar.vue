@@ -46,7 +46,8 @@ import {
   Settings,
   User,
   ShoppingCart,
-  FileText
+  FileText,
+  FolderOpen
 } from 'lucide-vue-next'
 
 const menuItems = [
@@ -55,8 +56,9 @@ const menuItems = [
   { name: 'Users', path: '/users', icon: Users },
   { name: 'Orders', path: '/orders', icon: ShoppingCart },
   { name: 'Reports', path: '/reports', icon: FileText },
-  { name: 'Settings', path: '/settings', icon: Settings },
-  { name: 'Profile', path: '/profiles', icon: Settings },
-  { name: 'Parameters', path: '/parameters', icon: Settings }
+  { name: 'Projects', path: '/projects', icon: FolderOpen },
+  { name: 'Profiles', path: '/profiles', icon: Settings },
+  { name: 'Parameters', path: '/parameters', icon: Settings },
+  { name: 'Settings', path: '/settings', icon: Settings }
 ]
 </script>
