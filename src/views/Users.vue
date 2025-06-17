@@ -1,14 +1,18 @@
 <template>
   <div class="space-y-6">
+
+    <AddUserDialog v-model:open="addUserDialogOpen" />
+
     <!-- Header -->
     <div class="flex items-center justify-between">
       <div>
         <h2 class="text-2xl font-bold">Users</h2>
         <p class="text-muted-foreground">Manage your user accounts</p>
       </div>
-      <Button>
-        <Plus class="h-4 w-4 mr-2" />
-        Add User
+
+      <Button @click="openAddUserDialog">
+        <Plus class="h-4 w-4" />
+        <span>Add User</span>
       </Button>
     </div>
 
@@ -79,19 +83,20 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { Plus, Filter, User, Edit, Trash2 } from 'lucide-vue-next'
-import {Button} from '@/components/ui/button'
-import {Input} from '@/components/ui/input'
-import {Card} from '@/components/ui/card'
-import {CardContent} from '@/components/ui/card'
-import {Badge} from '@/components/ui/badge'
-import {Table} from '@/components/ui/table'
-import {TableHeader} from '@/components/ui/table'
-import {TableBody} from '@/components/ui/table'
-import {TableRow} from '@/components/ui/table'
-import {TableHead} from '@/components/ui/table'
-import {TableCell} from '@/components/ui/table'
-
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Card } from '@/components/ui/card'
+import { CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Table } from '@/components/ui/table'
+import { TableHeader } from '@/components/ui/table'
+import { TableBody } from '@/components/ui/table'
+import { TableRow } from '@/components/ui/table'
+import { TableHead } from '@/components/ui/table'
+import { TableCell } from '@/components/ui/table'
+import AddUserDialog from '@/components/AddUserDialog.vue';
 const users = [
   {
     id: 1,
@@ -139,4 +144,11 @@ const users = [
     joined: 'Feb 05, 2024',
   },
 ]
+
+const addUserDialogOpen = ref(false);
+
+const openAddUserDialog = () => {
+  addUserDialogOpen.value = true;
+};
+
 </script>

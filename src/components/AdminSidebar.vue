@@ -11,13 +11,9 @@
 
       <!-- Navigation -->
       <nav class="flex-1 space-y-1 p-4">
-        <router-link
-          v-for="item in menuItems"
-          :key="item.name"
-          :to="item.path"
+        <router-link v-for="item in menuItems" :key="item.name" :to="item.path"
           class="flex items-center space-x-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-          :class="{ 'bg-accent text-accent-foreground': $route.path === item.path }"
-        >
+          :class="{ 'bg-accent text-accent-foreground': $route.path === item.path }">
           <component :is="item.icon" class="h-4 w-4" />
           <span>{{ item.name }}</span>
         </router-link>
@@ -36,15 +32,18 @@
         </div>
       </div>
     </div>
+
+
+
   </aside>
 </template>
 
 <script setup lang="ts">
-import { 
-  LayoutDashboard, 
-  Users, 
-  BarChart3, 
-  Settings, 
+import {
+  LayoutDashboard,
+  Users,
+  BarChart3,
+  Settings,
   User,
   ShoppingCart,
   FileText
@@ -57,5 +56,7 @@ const menuItems = [
   { name: 'Orders', path: '/orders', icon: ShoppingCart },
   { name: 'Reports', path: '/reports', icon: FileText },
   { name: 'Settings', path: '/settings', icon: Settings },
+  { name: 'Profile', path: '/profiles', icon: Settings },
+  { name: 'Parameters', path: '/parameters', icon: Settings }
 ]
 </script>
