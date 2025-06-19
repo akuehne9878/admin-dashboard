@@ -26,7 +26,7 @@
                   {{ profile.name }}
                 </a>
               </TableCell>
-              <TableCell>{{ profile.parameterKeys.length }}</TableCell>
+              <TableCell>{{ profile.id }}</TableCell>
               <TableCell class="text-right">
                 <Button variant="ghost" size="sm" @click="editProfile(profile)">
                   <Edit class="h-4 w-4" />

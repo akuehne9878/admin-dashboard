@@ -82,6 +82,8 @@
             </DialogContent>
         </Dialog>
 
+        <TreeView :nodes="projectTree" />
+
     </div>
 </template>
 <script setup lang="ts">
@@ -89,10 +91,12 @@ import { ref } from 'vue'
 import { Plus, Edit, Trash2 } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 import { Card, CardContent } from '@/components/ui/card'
 import { Dialog, DialogTitle, DialogContent } from '@/components/ui/dialog'
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table'
 import { useParameterStore, Parameter } from '@/stores/parameterStore'
+import TreeView from '@/components/custom/treeview/TreeView.vue'
 
 const parameterStore = useParameterStore()
 const openAddModal = ref(false)
@@ -124,4 +128,50 @@ function closeModal() {
     editingKey.value = null
     modalParam.value = { key: '', name: '', description: '', value: '' }
 }
+
+
+const projectTree = [
+    {
+        id: '1',
+        name: 'Frontend',
+        children: [
+            {
+                id: '1-1',
+                name: 'UI-Komponenten',
+                children: [
+                    { id: '1-1-1', name: 'Button.vue' },
+                    { id: '1-1-2', name: 'Modal.vue' },
+                ],
+            },
+            {
+                id: '1-2',
+                name: 'Pages',
+                children: [
+                    { id: '1-2-1', name: 'Home.vue' },
+                    { id: '1-2-2', name: 'About.vue' },
+                ],
+            },
+        ],
+    },
+    {
+        id: '2',
+        name: 'Backend',
+        children: [
+            {
+                id: '2-1',
+                name: 'API',
+                children: [
+                    { id: '2-1-1', name: 'auth.ts' },
+                    { id: '2-1-2', name: 'user.ts' },
+                ],
+            },
+            { id: '2-2', name: 'utils.ts' },
+        ],
+    },
+    {
+        id: '3',
+        name: 'README.md',
+    },
+]
+
 </script>
