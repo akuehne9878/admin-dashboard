@@ -40,25 +40,48 @@
                 </Table>
             </CardContent>
         </Card>
-        <Card v-if="openAddModal || openEditModal"
-            class="fixed z-50 inset-0 flex items-center justify-center bg-black/40">
-            <CardContent class="w-full max-w-md bg-white rounded shadow-lg p-6">
-                <h3 class="text-xl font-bold mb-4">
-                    {{ openEditModal ? 'Edit Parameter' : 'Add Parameter' }}
-                </h3>
-                <Input v-model="modalParam.key" placeholder="Key" class="mb-2" :disabled="openEditModal" />
-                <Input v-model="modalParam.name" placeholder="Name" class="mb-2" />
-                <Input v-model="modalParam.description" placeholder="Description" class="mb-2" />
-                <Input v-model="modalParam.value" placeholder="Value" class="mb-4" />
-                <div class="flex justify-end space-x-2">
-                    <Button variant="outline" @click="closeModal">Cancel</Button>
+
+        <Dialog :open="openAddModal || openEditModal" @update:open="closeModal">
+            <DialogContent>
+                <DialogHeader>
+                    <DialogTitle> {{ openEditModal ? 'Edit Parameter' : 'Add Parameter' }}</DialogTitle>
+                    <DialogDescription>
+                        Make changes to your profile here. Click save when you're done.
+                    </DialogDescription>
+                </DialogHeader>
+
+                <div class="flex flex-col items-center space-x-2">
+                    <div class="w-full max-w-md">
+                        <label class="text-sm font-medium">Key</label>
+                        <Input v-model="modalParam.key" placeholder="Key" class="mb-2" :disabled="openEditModal" />
+                    </div>
+                    <div class="w-full max-w-md">
+                        <label class="text-sm font-medium">Name</label>
+                        <Input v-model="modalParam.name" placeholder="Name" class="mb-2" />
+                    </div>
+                    <div class="w-full max-w-md">
+                        <label class="text-sm font-medium">Description</label>
+                        <Input v-model="modalParam.description" placeholder="Description" class="mb-2" />
+                    </div>
+                    <div class="w-full max-w-md">
+                        <label class="text-sm font-medium">Value</label>
+                        <Input v-model="modalParam.value" placeholder="Value" class="mb-4" />
+                    </div>
+                </div>
+
+                <DialogFooter class="flex justify-end space-x-2">
+                    <DialogClose as-child>
+                        <Button variant="outline" @click="closeModal">Cancel</Button>
+                    </DialogClose>
                     <Button :disabled="!modalParam.key.trim() || !modalParam.name.trim()"
                         @click="openEditModal ? updateParam() : addParam()">
                         {{ openEditModal ? 'Save' : 'Add' }}
                     </Button>
-                </div>
-            </CardContent>
-        </Card>
+                </DialogFooter>
+
+            </DialogContent>
+        </Dialog>
+
     </div>
 </template>
 <script setup lang="ts">
@@ -67,6 +90,7 @@ import { Plus, Edit, Trash2 } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent } from '@/components/ui/card'
+import { Dialog, DialogTitle, DialogContent } from '@/components/ui/dialog'
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table'
 import { useParameterStore, Parameter } from '@/stores/parameterStore'
 
